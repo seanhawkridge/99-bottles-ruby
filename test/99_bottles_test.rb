@@ -59,5 +59,4 @@ class BottlesTest < Minitest::Test
     assert_equal expected, Bottles.new.verses(99,98)
   end
 
-
 end

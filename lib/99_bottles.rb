@@ -1,17 +1,16 @@
 
 class Bottles
 
+  def song
+    verses(99, 0)
+  end
+
   def verses(starting, ending)
     starting.downto(ending).collect { |n| verse(n) }.join("\n")
   end
 
   def verse(number)
     case number
-      when 2
-        "2 bottles of beer on the wall, " +
-        "2 bottles of beer.\n" +
-        "Take one down and pass it around, " +
-        "1 bottle of beer on the wall.\n"
       when 1
         "1 bottle of beer on the wall, " +
         "1 bottle of beer.\n" +
@@ -23,11 +22,19 @@ class Bottles
         "Go to the store and buy some more, " +
         "99 bottles of beer on the wall.\n"
       else
-        "#{number} bottles of beer on the wall, " +
-        "#{number} bottles of beer.\n" +
+        "#{number} #{container(number)} of beer on the wall, " +
+        "#{number} #{container(number)} of beer.\n" +
         "Take one down and pass it around, " +
-        "#{number-1} bottles of beer on the wall.\n"
+        "#{number-1} #{container(number-1)} of beer on the wall.\n"
       end
+  end
+
+  def container(number)
+    if number == 1
+      "bottle"
+    else
+      "bottles"
+    end
   end
 
 end
