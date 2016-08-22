@@ -34,7 +34,7 @@ class BottlesTest < Minitest::Test
   def test_verse_1
     expected = "1 bottle of beer on the wall, " +
     "1 bottle of beer.\n" +
-    "Take one down and pass it around, " +
+    "Take it down and pass it around, " +
     "no more bottles of beer on the wall.\n"
 
     assert_equal expected, Bottles.new.verse(1)
