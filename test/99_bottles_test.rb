@@ -49,7 +49,7 @@ class BottlesTest < Minitest::Test
     assert_equal expected, Bottles.new.verse(0)
   end
 
-  def test_verses
+  def test_verses_range
     expected = "99 bottles of beer on the wall, 99 bottles of beer.\n" +
     "Take one down and pass it around, 98 bottles of beer on the wall.\n" +
     "\n" +
